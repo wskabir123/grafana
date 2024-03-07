@@ -24,7 +24,7 @@ waris(changeme)  ALL=(ALL) NOPASSWD:ALL
 
 - **ansible-playbook -i gra_servers grafana-deployment.yml**
 
-This command will deploy Grafana on the selected hosts listed in your Ansible inventory file also opens Firewall port on the target host if its not already open.
+This command will deploy Grafana on the selected host listed in your Ansible inventory file also opens Firewall port on the target host if its not already open.
 
 try accessing it with your browser **ip:3000** also check the service on the host **systemctl status grafana-server**
 
