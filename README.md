@@ -43,6 +43,7 @@ You can deploy grafana using ansible to your traget machine.
 
 Magic happens here..
 
+```
 ansible-playbook -i gra_servers grafana-deployment.yml
 ```
 ### This command will deploy Grafana on the selected hosts listed in your Ansible inventory file.
@@ -53,4 +54,6 @@ Use admin/admin to login and change the password
 
 Additionally use rm_grafana.yml to remove it from target instance :) 
 
+```
 ansible-playbook -i gra_servers rm_grafana.yml
+```
