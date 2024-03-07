@@ -20,7 +20,7 @@
 waris(changeme)  ALL=(ALL) NOPASSWD:ALL
 
 
-### Deploy Grafana using Ansible Magic happens here..
+### Deploy Grafana using Ansible, Magic happens here..
 
 - **ansible-playbook -i gra_servers grafana-deployment.yml**
 
