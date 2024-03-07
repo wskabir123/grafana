@@ -3,8 +3,6 @@
 
  Setting up SSH Key Authentication for Ansible
 
-SSH key authentication provides a secure and efficient way to connect to remote servers from your Ansible control node. Follow these steps to set up SSH key authentication for your Grafana servers and configure Ansible to use them:
-
  Why SSH Key Authentication?
 
 - **Security**: SSH key authentication eliminates the need to enter passwords for each SSH connection, making it less vulnerable to brute-force attacks.
