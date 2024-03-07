@@ -1,7 +1,7 @@
 [grafana_servers]
-grafana-server-1 ansible_host=10.26.83.140
+grafana-server-1 ansible_host=192.168.1.100
 
 [grafana_servers:vars]
-ansible_user=graf
+ansible_user=waris(replaceme)
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 

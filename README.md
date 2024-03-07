@@ -43,10 +43,14 @@ You can deploy grafana using ansible to your traget machine.
 
 Magic happens here..
 
-ansible-playbook -i inventory.ini grafana-deployment.yml
+ansible-playbook -i gra_servers grafana-deployment.yml
 ```
 ### This command will deploy Grafana on the selected hosts listed in your Ansible inventory file.
 
 **try accessing it with your ip:3000 also check the service on the host side **systemctl status grafana-server
 Use admin/admin to login and change the password
 
+
+Additionally use rm_grafana.yml to remove it from target instance :) 
+
+ansible-playbook -i gra_servers rm_grafana.yml
