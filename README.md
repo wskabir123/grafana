@@ -9,29 +9,28 @@
 
 
   ** Generate an SSH key pair on ansible node:
-   ```
+   
    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-   ```
+   
 
  **Copy Public Key to intended grafana host**:
-   ```
+   
    ssh-copy-id -i ~/.ssh/id_rsa.pub waris(replaceme)@192.168.1.100
 
    Now try logging into the machine, with:   "ssh 'waris(replaceme)@192.168.1.100
 
 ** Update Ansible inventory file (`gra_servers`) add your SSH user and private key also add the user to sudoers **
 
-```
+
 waris(changeme)  ALL=(ALL) NOPASSWD:ALL
-```
+
 
 ### Deploy Grafana using Ansible
 
 Magic happens here..
 
-```
 ansible-playbook -i gra_servers grafana-deployment.yml
-```
+
 This command will deploy Grafana on the selected hosts listed in your Ansible inventory file.
 
 try accessing it with your ip:3000 also check the service on the host side **systemctl status grafana-server
@@ -40,8 +39,8 @@ Use admin/admin to login and change the password
 
 ** Additionally use rm_grafana.yml to remove it from target instance 😊 **
 
-```
+
 ansible-playbook -i gra_servers rm_grafana.yml
-```
+
 
 /Waris
