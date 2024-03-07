@@ -26,7 +26,7 @@ waris(changeme)  ALL=(ALL) NOPASSWD:ALL
 
 This command will deploy Grafana on the selected hosts listed in your Ansible inventory file also opens Firewall port on the target host if its not already open.
 
-try accessing it with your ip:3000 also check the service on the host side **systemctl status grafana-server
+try accessing it with your browser <ip:3000> also check the service on the host <systemctl status grafana-server>
 Use admin/admin to login and change the password
 
 
