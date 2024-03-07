@@ -1,0 +1,42 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Import GPG key
+      shell: wget -q -O /tmp/gpg.key https://rpm.grafana.com/gpg.key && sudo rpm --import /tmp/gpg.key
+      args:
+        creates: /tmp/gpg.key
+
+    - name: Create Grafana repository file
+      template:
+        src: grafana.repo.j2
+        dest: /etc/yum.repos.d/grafana.repo
+      notify: Update package cache
+
+    - name: Install Grafana
+      package:
+        name: grafana
+        state: present
+
+    - name: Check if port 3000 is open for Grafana
+      shell: firewall-cmd --query-port=3000/tcp
+      register: port_3000_open
+      ignore_errors: true
+
+    - name: Open port 3000 (additional step) 
+      firewalld:
+        port: 3000/tcp
+        state: enabled
+      when: port_3000_open.rc != 0
+
+    - name: Start Grafana service
+      systemd:
+        name: grafana-server
+        state: started
+        enabled: yes
+
+  handlers:
+    - name: Update package cache
+      command: dnf makecache
+
