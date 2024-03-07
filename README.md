@@ -1,4 +1,4 @@
-# The goal is to deploy grafana with using ansible 🍟🍟
+# The goal is to deploy grafana using ansible 🍟🍟
 
 
  Setting up SSH Key Authentication for Ansible
