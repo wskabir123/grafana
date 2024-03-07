@@ -19,7 +19,7 @@
 
    Now try logging into the machine, with:   "ssh 'waris(replaceme)@192.168.1.100
 
-** Update Ansible inventory file (`gra_servers`) add your SSH user and private key also add the user to sudoers **
+** Update Ansible inventory file (`gra_servers`) add your SSH user and private key also add the user to /etc/sudoers **
 
 
 waris(changeme)  ALL=(ALL) NOPASSWD:ALL
