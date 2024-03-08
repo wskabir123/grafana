@@ -14,7 +14,7 @@
    
    ssh-copy-id -i ~/.ssh/id_rsa.pub waris(replaceme)@192.168.1.100 also try to test if the ssh connection works "ssh 'waris(replaceme)@192.168.1.100
 
-- **Update Ansible inventory file (`gra_servers`) add your SSH user and private key also add the user to /etc/sudoers**
+- **Update Ansible inventory file (`gra_servers`) add your SSH user and private key, also add the user to /etc/sudoers in the host**
 
 
 waris(changeme)  ALL=(ALL) NOPASSWD:ALL
